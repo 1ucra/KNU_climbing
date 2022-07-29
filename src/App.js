@@ -2,9 +2,11 @@ import React from 'react';
 import {ReactComponent as Logo} from './logo.svg';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Nav from 'react-bootstrap/Nav';
+import {Nav,Container,Row,Col} from 'react-bootstrap';
+import data from './data';
 
 function App() {
+  console.log(data.length)
   return (
     <>
       
@@ -32,6 +34,19 @@ function App() {
           </Nav.Link>
         </Nav.Item>
       </Nav>
+
+      <div className="container">
+        <div className="row">
+          {data.map((d,i)=>{
+            return(
+              <div className="col-md-4">
+                <img src={`../img/${i}.jpg`} width="80%" />
+                <h4>{d.title}</h4>
+                <p>{d.date}</p>
+              </div>
+          ) })}
+        </div>
+      </div>
       </>
   );
 }
