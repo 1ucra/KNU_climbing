@@ -2,7 +2,7 @@ let data = [
     {
       id : 0,
       title : "단체샷 1",
-      date : "Born in France",
+      date : "2022- ",
     },
   
     {
